@@ -14,4 +14,11 @@ class ThemeColors {
   static const Color toggleSwitchActiveButtonColor = Color(0xFF433C90);
   static const Color toggleSwitchInActiveButtonColor = Color(0xFF474747);
   static const Color errorFontColor = Color(0xFFEE1111);
+  static const Color backButtonBackgroung = Color(0xFFFFFFFF);
+  static const Color backButtonBorderColor = Color(0xFFE1E1E1);
+  static const Color otpTextColor = Color(0xFFA2A2A2);
+  static const Color resendTextColor = Color(0xFF333333);
+  static const Color otpCountdownTmerColor = Color(0xFF868686);
+  static const Color resendUnderLineColor = Color(0xFFD9D9D9);
+  static const Color loginNowTextColor = Color(0xFF2458D5);
 }

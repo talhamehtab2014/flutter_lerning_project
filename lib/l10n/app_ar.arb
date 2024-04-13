@@ -1,3 +1,5 @@
 {
-  "hello": "hello"
+  "create_account" :"Create Your Account ",
+  "signUp_message": "Enter you registered mobile number and\n verify OTP to login",
+  "signUP": "Sign up"
 }
