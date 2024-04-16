@@ -10,7 +10,7 @@ class HomeTopCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 355.w,
+        width: double.maxFinite,
         height: 345.h,
         decoration: const BoxDecoration(
           image: DecorationImage(

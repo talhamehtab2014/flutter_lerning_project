@@ -85,7 +85,7 @@ class _PhoneTextFieldState extends State<PhoneTextField> {
                     LengthLimitingTextInputFormatter(11),
                     PhoneNumberFormatter(),
                   ],
-                  onChanged: (value) {
+                  onEditingComplete: () {
                     if (_controller.text.length == 11) {
                       // Close the keyboard when the last digit is entered
                       FocusScope.of(context).unfocus();

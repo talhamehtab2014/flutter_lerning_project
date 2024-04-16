@@ -33,6 +33,16 @@ class AppTextStyle {
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,
   );
+  static TextStyle cardMainTitle = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+    color: ThemeColors.cardMainTitleColor,
+  );
+  static TextStyle cardSubTitle = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w400,
+    color: ThemeColors.mainTitle,
+  );
   static TextStyle otpResendText = TextStyle(
     //decoration: TextDecoration.underline,
     //decorationColor: ThemeColors.resendUnderLineColor,
@@ -40,8 +50,39 @@ class AppTextStyle {
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,
   );
-  static const subtitle1 = TextStyle(fontSize: 16, fontWeight: FontWeight.w600);
-  static const subtitle2 = TextStyle(fontSize: 16, fontWeight: FontWeight.w500);
-  static const subtitle3 = TextStyle(fontSize: 16, fontWeight: FontWeight.w400);
-  static const body1 = TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
+  static TextStyle loginNowStyle = const TextStyle(
+    color: ThemeColors.loginNowTextColor,
+    decoration: TextDecoration.underline,
+    decorationColor: ThemeColors.loginNowTextColor,
+  );
+  static TextStyle subtitle1 = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w600,
+    color: ThemeColors.cardMainTitleColor,
+  );
+  static TextStyle subtitle2 = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w300,
+    color: ThemeColors.cardMainTitleColor,
+  );
+  static TextStyle wishTitleStyle = TextStyle(
+    color: ThemeColors.toggleSwitchInActiveButtonColor,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle subtitle3 =
+      TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w400);
+  static TextStyle bottomNavUnselectedLabelStyle = TextStyle(
+      fontSize: 12.sp,
+      fontWeight: FontWeight.w400,
+      color: ThemeColors.bottomNavUnSelectedLabelColor);
+  static TextStyle bottomNavSelectedLabelStyle = TextStyle(
+      fontSize: 12.sp,
+      fontWeight: FontWeight.w500,
+      color: ThemeColors.mainTitle);
+  static TextStyle wishModalStyle = TextStyle(
+    fontSize: 18.sp,
+    color: ThemeColors.mainTitle,
+    fontWeight: FontWeight.w600,
+  );
 }

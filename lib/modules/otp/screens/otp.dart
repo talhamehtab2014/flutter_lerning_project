@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_iwish_practice/utils/app_text_style.dart';
@@ -66,6 +67,7 @@ class _OtpPageState extends State<OtpPage> {
     } else {
       setState(() {
         pinCodeError = false;
+        Get.toNamed(Routes().getLoginPage());
       });
     }
   }
@@ -131,9 +133,9 @@ class _OtpPageState extends State<OtpPage> {
                   SizedBox(
                     height: 29.h,
                   ),
-                  RawKeyboardListener(
+                  KeyboardListener(
                     focusNode: FocusNode(),
-                    onKey: (RawKeyEvent event) {
+                    onKeyEvent: (KeyEvent event) {
                       if (event is KeyDownEvent &&
                           event.logicalKey == LogicalKeyboardKey.backspace) {
                         // Handle backspace key
@@ -153,47 +155,50 @@ class _OtpPageState extends State<OtpPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
                         5,
-                        (index) => Container(
-                          padding: const EdgeInsets.symmetric(vertical: 5),
-                          margin: const EdgeInsets.only(right: 10),
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                color: pinCodeError
-                                    ? ThemeColors.errorFontColor
-                                    : ThemeColors.txtFieldBorderColor),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(15),
+                        (index) => Expanded(
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(vertical: 5),
+                            margin: const EdgeInsets.only(right: 10),
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: pinCodeError
+                                      ? ThemeColors.errorFontColor
+                                      : ThemeColors.txtFieldBorderColor),
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(15),
+                              ),
                             ),
-                          ),
-                          width: 50,
-                          child: TextField(
-                            showCursor: false,
-                            maxLength: 1,
-                            maxLengthEnforcement: MaxLengthEnforcement.enforced,
-                            controller: controllers[index],
-                            keyboardType: TextInputType.number,
-                            style: AppTextStyle.otpTextStyle,
-                            textAlign: TextAlign.center,
-                            onChanged: (value) {
-                              if (value.length == 1) {
-                                // Move focus to the next text field
-                                FocusScope.of(context).nextFocus();
-                                if (index == 4) {
-                                  // Close the keyboard when the last digit is entered
-                                  pinCode = controllers
-                                      .map((controller) => controller.text)
-                                      .join();
-                                  print(pinCode);
-                                  FocusScope.of(context).unfocus();
+                            width: 50,
+                            child: TextField(
+                              showCursor: false,
+                              maxLength: 1,
+                              maxLengthEnforcement:
+                                  MaxLengthEnforcement.enforced,
+                              controller: controllers[index],
+                              keyboardType: TextInputType.number,
+                              style: AppTextStyle.otpTextStyle,
+                              textAlign: TextAlign.center,
+                              onChanged: (value) {
+                                if (value.length == 1) {
+                                  // Move focus to the next text field
+                                  FocusScope.of(context).nextFocus();
+                                  if (index == 4) {
+                                    // Close the keyboard when the last digit is entered
+                                    pinCode = controllers
+                                        .map((controller) => controller.text)
+                                        .join();
+                                    // print(pinCode);
+                                    FocusScope.of(context).unfocus();
+                                  }
+                                } else if (value.isEmpty) {
+                                  // Move focus to the previous text field if the digit is deleted
+                                  FocusScope.of(context).previousFocus();
                                 }
-                              } else if (value.isEmpty) {
-                                // Move focus to the previous text field if the digit is deleted
-                                FocusScope.of(context).previousFocus();
-                              }
-                            },
-                            decoration: const InputDecoration(
-                              counterText: '',
-                              border: InputBorder.none,
+                              },
+                              decoration: const InputDecoration(
+                                counterText: '',
+                                border: InputBorder.none,
+                              ),
                             ),
                           ),
                         ),

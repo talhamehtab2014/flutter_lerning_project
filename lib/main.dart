@@ -1,5 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_iwish_practice/modules/bottom_navigation/screens/bottom_navigation.dart';
+import 'package:flutter_iwish_practice/modules/home_page/screens/home_page.dart';
 import 'package:flutter_iwish_practice/modules/sign_up/screens/sign_up.dart';
 import 'package:flutter_iwish_practice/utils/routes.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,9 +34,9 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             textTheme: GoogleFonts.poppinsTextTheme(),
           ),
-          //home: const SignUp(),
-          initialRoute: Routes().getSignUp(),
-          getPages: Routes().routesMap,
+          home: const BottomNavigation(),
+          // initialRoute: Routes().getSignUp(),
+          //  getPages: Routes().routesMap,
           localizationsDelegates: const [
             CountryLocalizations.delegate,
             AppLocalizations.delegate,
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
           ],
         );
       },
-      child: SignUp(),
+      child: HomePage(),
     );
   }
 }

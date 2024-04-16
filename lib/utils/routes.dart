@@ -1,4 +1,6 @@
-import 'package:flutter_iwish_practice/modules/sign_up/screens/otp.dart';
+import 'package:flutter_iwish_practice/modules/interest/screens/user_interest.dart';
+import 'package:flutter_iwish_practice/modules/login/screens/login.dart';
+import 'package:flutter_iwish_practice/modules/otp/screens/otp.dart';
 import 'package:flutter_iwish_practice/modules/sign_up/screens/sign_up.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
@@ -11,10 +13,24 @@ class Routes {
   Routes.internal();
   String getSignUp() => SignUp.id;
   String getOtpPage() => OtpPage.id;
+  String getLoginPage() => Login.id;
+  String getUserInterestPage() => UserInterest.id;
   List<GetPage> routesMap = [
     GetPage(
-        name: SignUp.id, page: () => SignUp(), transition: Transition.fadeIn),
+        name: SignUp.id,
+        page: () => const SignUp(),
+        transition: Transition.fadeIn),
     GetPage(
-        name: OtpPage.id, page: () => OtpPage(), transition: Transition.fadeIn)
+        name: OtpPage.id,
+        page: () => const OtpPage(),
+        transition: Transition.fadeIn),
+    GetPage(
+        name: Login.id,
+        page: () => const Login(),
+        transition: Transition.fadeIn),
+    GetPage(
+        name: UserInterest.id,
+        page: () => UserInterest(),
+        transition: Transition.fadeIn)
   ];
 }
