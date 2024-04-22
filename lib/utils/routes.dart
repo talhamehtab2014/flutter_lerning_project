@@ -1,3 +1,4 @@
+import 'package:flutter_iwish_practice/modules/create_wish/screens/create_wish.dart';
 import 'package:flutter_iwish_practice/modules/interest/screens/user_interest.dart';
 import 'package:flutter_iwish_practice/modules/login/screens/login.dart';
 import 'package:flutter_iwish_practice/modules/otp/screens/otp.dart';
@@ -15,18 +16,21 @@ class Routes {
   String getOtpPage() => OtpPage.id;
   String getLoginPage() => Login.id;
   String getUserInterestPage() => UserInterest.id;
+  String getCreateWishPage() => CreateWish.id;
   List<GetPage> routesMap = [
     GetPage(
         name: SignUp.id,
         page: () => const SignUp(),
         transition: Transition.fadeIn),
     GetPage(
-        name: OtpPage.id,
-        page: () => const OtpPage(),
-        transition: Transition.fadeIn),
+        name: OtpPage.id, page: () => OtpPage(), transition: Transition.fadeIn),
     GetPage(
         name: Login.id,
         page: () => const Login(),
+        transition: Transition.fadeIn),
+    GetPage(
+        name: CreateWish.id,
+        page: () => CreateWish(),
         transition: Transition.fadeIn),
     GetPage(
         name: UserInterest.id,

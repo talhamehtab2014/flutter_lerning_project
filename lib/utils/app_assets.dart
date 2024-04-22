@@ -10,7 +10,10 @@ class AppAssets {
   static const String icFlightTrip = 'assets/images/icFlightTrip.png';
 
   static const String icWishStar = 'assets/images/icWishStar.png';
+  static const String icWishHome = 'assets/images/icWishHome.png';
   static const String icTrendingflame = 'assets/images/icTrendingflame.png';
+  static const String ictoggleDisable = 'assets/images/ictoggleDisable.png';
+  static const String ictoggleEnable = 'assets/images/ictoggleEnabled.png';
 
   static const String icNavHome = 'assets/images/icNavHome.png';
   static const String icNavTrip = 'assets/images/icNavTrip.png';
@@ -20,4 +23,6 @@ class AppAssets {
 
   static const String imgTopSeller = 'assets/images/imgTopSeller.png';
   static const String imgTrendingWish = 'assets/images/imgTrendingWish.png';
+
+  static const String icFileUpload = 'assets/images/icFileUpload.png';
 }

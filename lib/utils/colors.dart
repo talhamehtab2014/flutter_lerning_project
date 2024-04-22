@@ -28,7 +28,12 @@ class ThemeColors {
   static Color tripCardBgColor = const Color(0xFFBCB4FF).withOpacity(0.2);
 
   static const Color cardMainTitleColor = Color(0xFF414141);
-  // static const Color cardMainTitleColor = Color(0xFF414141);
+  static Color toggleSwitchinActiveBorderColor =
+      Color(0xFFF1C1C1C).withOpacity(0.15);
+
   static Color bottomNavSelectedBgColor = const Color(0xFFBCB4FF);
   static Color bottomNavUnSelectedLabelColor = const Color(0xFFABABAB);
+
+  static Color bottomModelSheetBgtranspearentColor =
+      Color(0xFFCDCDCD).withOpacity(0.85);
 }

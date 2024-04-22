@@ -1,18 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'colors.dart';
 
 class AppTextStyle {
   static TextStyle header1 = TextStyle(
+    fontFamily: 'Poppins',
     color: ThemeColors.mainTitle,
     fontSize: 20.sp,
     fontWeight: FontWeight.w700,
   );
   static TextStyle header2 = TextStyle(
     color: ThemeColors.subTitle,
-    fontSize: 13.sp,
+    fontSize: 13,
     fontWeight: FontWeight.w300,
+  );
+  static TextStyle header4 = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w500,
+    color: ThemeColors.mainTitle,
   );
   static TextStyle errorFontStyle = TextStyle(
     color: ThemeColors.errorFontColor,
@@ -85,4 +92,12 @@ class AppTextStyle {
     color: ThemeColors.mainTitle,
     fontWeight: FontWeight.w600,
   );
+  static TextStyle userIntrest = TextStyle(
+      fontSize: 15.sp,
+      fontWeight: FontWeight.w300,
+      color: ThemeColors.mainTitle);
+  static TextStyle normalText = TextStyle(
+      fontSize: 10.sp,
+      fontWeight: FontWeight.w400,
+      color: ThemeColors.mainTitle);
 }

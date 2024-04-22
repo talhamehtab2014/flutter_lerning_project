@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iwish_practice/utils/app_text_style.dart';
 import 'package:flutter_iwish_practice/utils/colors.dart';
+import 'package:flutter_iwish_practice/utils/routes.dart';
 import 'package:flutter_iwish_practice/widgets/wish_modal_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -16,7 +17,8 @@ class MakeWishModal extends StatelessWidget {
     return Container(
       width: double.maxFinite,
       height: double.maxFinite,
-      decoration: BoxDecoration(color: Color(0xFFCDCDCD).withOpacity(0.85)),
+      decoration:
+          BoxDecoration(color: ThemeColors.bottomModelSheetBgtranspearentColor),
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
@@ -45,13 +47,20 @@ class MakeWishModal extends StatelessWidget {
                   height: 19.h,
                 ),
                 WishModalButton(
-                    iconPath: AppAssets.icWishStar, title: 'Create a wish'),
+                  iconPath: AppAssets.icWishStar,
+                  title: 'Create a wish',
+                  onTap: () {
+                    Get.toNamed(Routes().getCreateWishPage());
+                  },
+                ),
                 SizedBox(
                   height: 15.h,
                 ),
                 WishModalButton(
-                    iconPath: AppAssets.icTrendingflame,
-                    title: 'Trending Wishes'),
+                  iconPath: AppAssets.icTrendingflame,
+                  title: 'Trending Wishes',
+                  onTap: () {},
+                ),
                 SizedBox(
                   height: 55.h,
                 )

@@ -8,17 +8,11 @@ class HomeTopCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: double.maxFinite,
-        height: 345.h,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(AppAssets.icBgSiginSignUp),
-          ),
-        ),
-      ),
+    return Image.asset(
+      AppAssets.icBgSiginSignUp,
+      width: 375.w,
+      height: 345.h,
+      fit: BoxFit.cover,
     );
   }
 }

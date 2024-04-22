@@ -65,6 +65,8 @@ class TrendingWishesGrid extends StatelessWidget {
 
   Widget _buildItem(int index) {
     return Container(
+      height: 224.h,
+      width: 158.w,
       padding: EdgeInsets.all(8.w),
       decoration: BoxDecoration(
         color: ThemeColors.socialSignInButton,
@@ -73,10 +75,13 @@ class TrendingWishesGrid extends StatelessWidget {
         ),
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
             child: Container(
+              height: 130.h,
+              width: 141.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.r),
                 image: const DecorationImage(

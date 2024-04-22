@@ -44,7 +44,7 @@ class TopShoppersListView extends StatelessWidget {
           height: 12.h,
         ),
         SizedBox(
-          height: 127.h,
+          height: 92.h,
           child: Padding(
             padding: EdgeInsets.only(left: 23.w),
             child: ListView.builder(

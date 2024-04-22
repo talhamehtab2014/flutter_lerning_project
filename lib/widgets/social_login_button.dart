@@ -17,7 +17,7 @@ class SocialLoginButton extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(12.r)),
           color: ThemeColors.socialSignInButton,
           image: DecorationImage(
-            fit: BoxFit.cover,
+            //fit: BoxFit.cover,
             image: AssetImage(icon),
           ),
         ),

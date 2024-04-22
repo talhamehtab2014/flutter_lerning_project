@@ -27,22 +27,22 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 23.w),
               child: Row(
                 children: [
-                  WishCard(),
+                  const WishCard(),
                   SizedBox(
                     width: 17.w,
                   ),
-                  TripCard(),
+                  const TripCard(),
                 ],
               ),
             ),
             SizedBox(
               height: 22.h,
             ),
-            TopShoppersListView(),
+            const TopShoppersListView(),
             SizedBox(
               height: 34.h,
             ),
-            TrendingWishesGrid(),
+            const TrendingWishesGrid(),
           ],
         ),
       ),
