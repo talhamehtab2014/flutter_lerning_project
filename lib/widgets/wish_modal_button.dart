@@ -17,20 +17,20 @@ class WishModalButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 18.w),
-      width: double.maxFinite,
-      height: 50.h,
-      decoration: BoxDecoration(
-        color: ThemeColors.socialSignInButton,
-        borderRadius: BorderRadius.all(
-          Radius.circular(
-            8.r,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 18.w),
+        width: double.maxFinite,
+        height: 50.h,
+        decoration: BoxDecoration(
+          color: ThemeColors.socialSignInButton,
+          borderRadius: BorderRadius.all(
+            Radius.circular(
+              8.r,
+            ),
           ),
         ),
-      ),
-      child: GestureDetector(
-        onTap: onTap,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

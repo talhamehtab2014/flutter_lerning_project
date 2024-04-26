@@ -23,6 +23,10 @@ class AppAssets {
 
   static const String imgTopSeller = 'assets/images/imgTopSeller.png';
   static const String imgTrendingWish = 'assets/images/imgTrendingWish.png';
+  static const String imgWishCompletionSuccessCard =
+      'assets/images/imgWishCompletionSuccessCard.png';
 
   static const String icFileUpload = 'assets/images/icFileUpload.png';
+  static const String icDropDown = 'assets/images/icDropDown.png';
+  static const String icProductUrl = 'assets/images/icProductUrl.png';
 }

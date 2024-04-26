@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_iwish_practice/modules/interest/controllers/user_intreset_controller.dart';
 import 'package:flutter_iwish_practice/utils/app_assets.dart';

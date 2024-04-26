@@ -26,7 +26,7 @@ class ThemeColors {
   static const Color loginNowTextColor = Color(0xFF2458D5);
   static Color wishCardBgColor = const Color(0xFFF37253).withOpacity(0.1);
   static Color tripCardBgColor = const Color(0xFFBCB4FF).withOpacity(0.2);
-
+  static Color checkDeliveryUnderlineColor = Color(0xFFE0E0E0);
   static const Color cardMainTitleColor = Color(0xFF414141);
   static Color toggleSwitchinActiveBorderColor =
       Color(0xFFF1C1C1C).withOpacity(0.15);

@@ -6,7 +6,7 @@ import 'package:flutter_iwish_practice/utils/colors.dart';
 import 'package:flutter_iwish_practice/widgets/continue_with.dart';
 import 'package:flutter_iwish_practice/widgets/home_top_card.dart';
 import 'package:flutter_iwish_practice/widgets/phn_text_field.dart';
-import 'package:flutter_iwish_practice/widgets/primarysignInUpButton.dart';
+import 'package:flutter_iwish_practice/widgets/primaryButton.dart';
 import 'package:flutter_iwish_practice/widgets/social_login_button.dart';
 import 'package:flutter_iwish_practice/widgets/wish_icon_sigin_signup.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -53,7 +53,7 @@ class SignUp extends StatelessWidget {
                           SizedBox(
                             height: 35.h,
                           ),
-                          PrimarySignInSignUp(
+                          PrimaryButton(
                               onTap: () {
                                 if (phnTextFieldController
                                         .controller.text.length ==

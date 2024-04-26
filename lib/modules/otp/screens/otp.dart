@@ -9,7 +9,7 @@ import 'package:flutter_iwish_practice/utils/colors.dart';
 import 'package:flutter_iwish_practice/utils/routes.dart';
 import 'package:flutter_iwish_practice/widgets/back_button.dart';
 import 'package:flutter_iwish_practice/widgets/home_top_card.dart';
-import 'package:flutter_iwish_practice/widgets/primarysignInUpButton.dart';
+import 'package:flutter_iwish_practice/widgets/primaryButton.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -197,7 +197,7 @@ class OtpPage extends StatelessWidget {
                           SizedBox(
                             height: 56.h,
                           ),
-                          PrimarySignInSignUp(
+                          PrimaryButton(
                               onTap: otpController.verifyOtp,
                               text: 'Verify OTP')
                         ],

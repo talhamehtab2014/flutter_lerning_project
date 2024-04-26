@@ -8,6 +8,7 @@ import '../../../utils/app_assets.dart';
 import '../../../utils/colors.dart';
 
 class BottomNavigation extends StatelessWidget {
+  static const id = '/BottomNavigation';
   var currentPageIndex = 0.obs;
   final screens = [
     const HomePage(),

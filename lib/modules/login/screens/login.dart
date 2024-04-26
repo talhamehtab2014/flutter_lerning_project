@@ -4,7 +4,7 @@ import 'package:flutter_iwish_practice/utils/routes.dart';
 import 'package:flutter_iwish_practice/widgets/continue_with.dart';
 import 'package:flutter_iwish_practice/widgets/home_top_card.dart';
 import 'package:flutter_iwish_practice/widgets/phn_text_field.dart';
-import 'package:flutter_iwish_practice/widgets/primarysignInUpButton.dart';
+import 'package:flutter_iwish_practice/widgets/primaryButton.dart';
 import 'package:flutter_iwish_practice/widgets/social_login_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -60,7 +60,7 @@ class Login extends StatelessWidget {
                       SizedBox(
                         height: 34.h,
                       ),
-                      PrimarySignInSignUp(onTap: _login, text: 'Login'),
+                      PrimaryButton(onTap: _login, text: 'Login'),
                       SizedBox(
                         height: 30.h,
                       ),

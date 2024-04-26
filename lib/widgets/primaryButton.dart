@@ -7,11 +7,17 @@ import '../utils/app_text_style.dart';
 import '../utils/colors.dart';
 import '../utils/routes.dart';
 
-class PrimarySignInSignUp extends StatelessWidget {
+class PrimaryButton extends StatelessWidget {
   final VoidCallback onTap;
   final String text;
-  const PrimarySignInSignUp(
-      {super.key, required this.onTap, required this.text});
+  double? width;
+  double? height;
+  PrimaryButton(
+      {super.key,
+      required this.onTap,
+      required this.text,
+      this.height = 0,
+      this.width = 0});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +25,8 @@ class PrimarySignInSignUp extends StatelessWidget {
       onTap: onTap,
       child: Container(
         alignment: Alignment.center,
-        width: 305.w,
-        height: 50.h,
+        width: width == 0 ? 305.w : width,
+        height: height == 0 ? 50.h : height,
         decoration: BoxDecoration(
           color: ThemeColors.btnSignInSignUp,
           borderRadius: BorderRadius.circular(12.r),
