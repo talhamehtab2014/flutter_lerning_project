@@ -51,24 +51,27 @@ class WishSummary extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   if (controller.imagepath.isNotEmpty)
-                    Container(
-                      width: controller.imagepath.length > 1
-                          ? 214.w
-                          : 327.w, // Adjust width based on the number of images
-                      height:
-                          224.h, // Adjust height based on the number of images
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.r),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(
-                            10.r,
-                          ),
+                    Expanded(
+                      child: Container(
+                        width: controller.imagepath.length > 1
+                            ? 214.w
+                            : 347
+                                .w, // Adjust width based on the number of images
+                        height: 224
+                            .h, // Adjust height based on the number of images
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.r),
                         ),
-                        child: Image.file(
-                          fit: BoxFit.cover,
-                          File(controller.imagepath[0]),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              10.r,
+                            ),
+                          ),
+                          child: Image.file(
+                            fit: BoxFit.cover,
+                            File(controller.imagepath[0]),
+                          ),
                         ),
                       ),
                     ),
@@ -214,17 +217,20 @@ class WishSummary extends StatelessWidget {
                               height: 2.5,
                             ),
                             Text(
+                              overflow: TextOverflow.clip,
                               controller.productUrlController.text,
                               style: AppTextStyle.cardMainTitle,
                             ),
                           ],
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 10.h, right: 26.w),
-                          child: Image.asset(
-                            AppAssets.icProductUrl,
-                            width: 15.w,
-                            height: 15.h,
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 6.h, right: 26.w),
+                            child: Image.asset(
+                              AppAssets.icProductUrl,
+                              width: 15.w,
+                              height: 15.h,
+                            ),
                           ),
                         ),
                       ],

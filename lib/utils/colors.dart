@@ -36,4 +36,8 @@ class ThemeColors {
 
   static Color bottomModelSheetBgtranspearentColor =
       Color(0xFFCDCDCD).withOpacity(0.85);
+  static Color moreSetingDividerColor = Color(0xFFF3F3F3);
+  static Color transactionsChartTextColor = Color(0xFF7C828A);
+
+  static Color transactionsChartBgColor = Color(0xFFF8F8F8);
 }

@@ -54,87 +54,87 @@ class CreateWish extends StatelessWidget {
                   return Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      GestureDetector(
-                        onTap: () {
-                          controller.getImage(controller.imagePath1);
-                        },
-                        child: controller.imagePath1.isNotEmpty
-                            ? Container(
-                                width: 100.w,
-                                height: 100.h,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.r),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      8.r,
-                                    ),
-                                  ),
-                                  child: Image.file(
-                                    fit: BoxFit.cover,
-                                    File(
-                                      controller.imagePath1.toString(),
-                                    ),
+                      controller.imagePath1.isNotEmpty
+                          ? Container(
+                              width: 100.w,
+                              height: 100.h,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.r),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    8.r,
                                   ),
                                 ),
-                              )
-                            : ImaggeUploadWidget(),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          controller.getImage(controller.imagePath2);
-                        },
-                        child: controller.imagePath2.isNotEmpty
-                            ? Container(
-                                width: 100.w,
-                                height: 100.h,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.r),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      8.r,
-                                    ),
-                                  ),
-                                  child: Image.file(
-                                    fit: BoxFit.cover,
-                                    File(
-                                      controller.imagePath2.toString(),
-                                    ),
+                                child: Image.file(
+                                  fit: BoxFit.cover,
+                                  File(
+                                    controller.imagePath1.toString(),
                                   ),
                                 ),
-                              )
-                            : ImaggeUploadWidget(),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          controller.getImage(controller.imagePath3);
-                        },
-                        child: controller.imagePath3.isNotEmpty
-                            ? Container(
-                                width: 100.w,
-                                height: 100.h,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.r),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      8.r,
-                                    ),
-                                  ),
-                                  child: Image.file(
-                                    fit: BoxFit.cover,
-                                    File(
-                                      controller.imagePath3.toString(),
-                                    ),
+                              ),
+                            )
+                          : GestureDetector(
+                              onTap: () {
+                                controller.getImage(controller.imagePath1);
+                              },
+                              child: ImaggeUploadWidget(),
+                            ),
+                      controller.imagePath2.isNotEmpty
+                          ? Container(
+                              width: 100.w,
+                              height: 100.h,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.r),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    8.r,
                                   ),
                                 ),
-                              )
-                            : ImaggeUploadWidget(),
-                      ),
+                                child: Image.file(
+                                  fit: BoxFit.cover,
+                                  File(
+                                    controller.imagePath2.toString(),
+                                  ),
+                                ),
+                              ),
+                            )
+                          : GestureDetector(
+                              onTap: () {
+                                controller.getImage(controller.imagePath2);
+                              },
+                              child: ImaggeUploadWidget(),
+                            ),
+                      controller.imagePath3.isNotEmpty
+                          ? Container(
+                              width: 100.w,
+                              height: 100.h,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.r),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    8.r,
+                                  ),
+                                ),
+                                child: Image.file(
+                                  fit: BoxFit.cover,
+                                  File(
+                                    controller.imagePath3.toString(),
+                                  ),
+                                ),
+                              ),
+                            )
+                          : GestureDetector(
+                              onTap: () {
+                                controller.getImage(controller.imagePath3);
+                              },
+                              child: ImaggeUploadWidget(),
+                            ),
                     ],
                   );
                 },
@@ -163,7 +163,7 @@ class CreateWish extends StatelessWidget {
                 child: Obx(
                   () {
                     return DropdownButton(
-                      hint: Text('Select Yuur Desired Purchase Country'),
+                      hint: const Text('Select Your Desired Purchase Country'),
                       borderRadius: BorderRadius.circular(8.r),
                       icon: Image.asset(
                         AppAssets.icDropDown,

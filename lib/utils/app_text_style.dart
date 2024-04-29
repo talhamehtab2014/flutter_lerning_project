@@ -170,4 +170,33 @@ class AppTextStyle {
     fontSize: 14.sp,
     fontWeight: FontWeight.w700,
   );
+  static TextStyle appBarMessageStyle = TextStyle(
+    fontFamily: 'Poppins',
+    color: ThemeColors.mainTitle,
+    fontSize: 17.sp,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle moreSettingTitleText = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: ThemeColors.mainTitle,
+  );
+  static TextStyle moreSettingDescriptionText = TextStyle(
+    fontFamily: 'Poppins',
+    color: ThemeColors.mainTitle,
+    fontSize: 13,
+    fontWeight: FontWeight.w300,
+  );
+  static TextStyle logoutLabelStyle = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 18.sp,
+    color: ThemeColors.mainTitle,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle transactionslabelStyle = TextStyle(
+      fontFamily: 'Poppins',
+      fontSize: 12.sp,
+      fontWeight: FontWeight.w300,
+      color: ThemeColors.mainTitle);
 }

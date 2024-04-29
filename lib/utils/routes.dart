@@ -4,6 +4,8 @@ import 'package:flutter_iwish_practice/modules/create_wish/screens/wish_creation
 import 'package:flutter_iwish_practice/modules/create_wish/screens/wish_summary.dart';
 import 'package:flutter_iwish_practice/modules/interest/screens/user_interest.dart';
 import 'package:flutter_iwish_practice/modules/login/screens/login.dart';
+import 'package:flutter_iwish_practice/modules/more-settings/screens/settings.dart';
+import 'package:flutter_iwish_practice/modules/more-settings/screens/transactions_page.dart';
 import 'package:flutter_iwish_practice/modules/otp/screens/otp.dart';
 import 'package:flutter_iwish_practice/modules/sign_up/screens/sign_up.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
@@ -23,6 +25,8 @@ class Routes {
   String getWishSummaryPage() => WishSummary.id;
   String getWishCreationSuccess() => WishCreationSuccess.id;
   String getBottomnavingation() => BottomNavigation.id;
+  String getSettingPage() => Settings.id;
+  String getTransactionsPage() => TransactionsPage.id;
   List<GetPage> routesMap = [
     GetPage(
         name: SignUp.id,
@@ -53,6 +57,14 @@ class Routes {
     GetPage(
         name: BottomNavigation.id,
         page: () => BottomNavigation(),
+        transition: Transition.fadeIn),
+    GetPage(
+        name: Settings.id,
+        page: () => Settings(),
+        transition: Transition.fadeIn),
+    GetPage(
+        name: TransactionsPage.id,
+        page: () => TransactionsPage(),
         transition: Transition.fadeIn)
   ];
 }

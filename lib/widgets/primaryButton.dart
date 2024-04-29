@@ -12,12 +12,15 @@ class PrimaryButton extends StatelessWidget {
   final String text;
   double? width;
   double? height;
-  PrimaryButton(
-      {super.key,
-      required this.onTap,
-      required this.text,
-      this.height = 0,
-      this.width = 0});
+  Color? buttonColor;
+  PrimaryButton({
+    super.key,
+    required this.onTap,
+    required this.text,
+    this.height = 0,
+    this.width = 0,
+    this.buttonColor = ThemeColors.btnSignInSignUp,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,7 @@ class PrimaryButton extends StatelessWidget {
         width: width == 0 ? 305.w : width,
         height: height == 0 ? 50.h : height,
         decoration: BoxDecoration(
-          color: ThemeColors.btnSignInSignUp,
+          color: buttonColor,
           borderRadius: BorderRadius.circular(12.r),
         ),
         child: Text(text, style: AppTextStyle.buttonText),

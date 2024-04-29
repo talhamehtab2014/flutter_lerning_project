@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iwish_practice/modules/home_page/screens/home_page.dart';
+import 'package:flutter_iwish_practice/modules/more-settings/screens/more_page.dart';
 import 'package:flutter_iwish_practice/utils/app_text_style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -27,11 +28,7 @@ class BottomNavigation extends StatelessWidget {
         'Chat',
       ),
     ),
-    const Center(
-      child: Text(
-        'Profile',
-      ),
-    ),
+    MorePage()
   ];
   BottomNavigation({super.key});
 
